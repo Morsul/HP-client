@@ -9,10 +9,14 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      { 
+        test: /\.(ts|tsx)$/, 
+        loader: "ts-loader" 
+      }
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
   },
   plugins: [
     new HtmlWebpackPlugin({
