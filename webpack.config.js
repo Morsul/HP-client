@@ -1,4 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ESLintWebpackPlugin from 'eslint-webpack-plugin';
+
 module.exports = {
   module: {
     rules: [
@@ -11,7 +13,7 @@ module.exports = {
       },
       { 
         test: /\.(ts|tsx)$/, 
-        loader: "ts-loader" 
+        loader: 'ts-loader' 
       }
     ],
   },
@@ -22,5 +24,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
+    new ESLintWebpackPlugin({
+      extensions: 'ts',
+    })
   ],
 };
