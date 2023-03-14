@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+.field {
+  width: 70%;
+  // margin: 0 auto;
+  display: flex;
+  vertical-align: top;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  section {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    > * {
+      background-color: grey;
+      padding: 10px;
+    }
+  }
+  .wide {
+    flex: 0 0 100%;
+  }
+}
+
+.bank {
+  width: 335px;
+  text-align: center;
+  padding: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.location {
+  min-width: 200px;
+}
+
+.bonus-deck {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 490px;
+  margin-left: auto;
+  &__update {
+    margin-left: auto;
+  }
+}
+
+.card {
+  &-list {
+    display: flex;
+    gap: 20px 10px;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    align-self: flex-end;
+  }
+  &__played {
+    cursor: pointer;
+    width: 150px;
+    height: 200px;
+  }
+}
+
+.villains {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  p {
+    width: 100%;
+  }
+  .villian {
+    flex: 0 0 calc(33% - 20px);
+    height: 50px;
+    background-color: aqua;
+    padding: 10px;
+  }
+}
+
+.location {
+  height: 209px;
+  width: 335px;
+  &__health {
+    display: flex;
+    gap: 6px;
+  }
+  .health-cell {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: green;
+    text-align: center;
+    font-size: 18px;
+    &__damaged {
+      background-color: red;
+    }
+  }
+}

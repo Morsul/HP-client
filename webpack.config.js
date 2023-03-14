@@ -1,5 +1,5 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ESLintWebpackPlugin from 'eslint-webpack-plugin';
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 module.exports = {
   module: {
@@ -8,24 +8,28 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-        },
+          loader: 'babel-loader'
+        }
       },
-      { 
-        test: /\.(ts|tsx)$/, 
-        loader: 'ts-loader' 
+      {
+        test: /\.(ts|tsx)$/,
+        loader: 'ts-loader'
+      },
+      {
+        test: /\.scss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
-    ],
+    ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['*', '.js', '.jsx', '.ts', '.tsx']
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: './index.html'
     }),
-    new ESLintWebpackPlugin({
-      extensions: 'ts',
+    new ESLintPlugin({
+      extensions: 'ts'
     })
-  ],
-};
+  ]
+}
