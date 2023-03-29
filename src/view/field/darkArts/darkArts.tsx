@@ -22,7 +22,9 @@ export const DarkArts = () => {
       >
         {darkArt.cardPullCount > 0 ? `осталось карт ${darkArt.cardPullCount}` : 'нечего тянуть'}
       </button>
-      <div className="dark-arts-event__last"></div>
+      <div className="dark-arts-event__last">
+        <p>description</p>
+      </div>
     </div>
   );
 };

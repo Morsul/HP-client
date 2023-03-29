@@ -1,1 +1,6 @@
-export const SERVERLINK = 'http://192.168.0.169:3002';
+export enum CardStateList{
+  CARD_IDLE,
+  CARD_SHOW,
+  CARD_DISCARD,
+  CARD_PLAY
+}

@@ -1,0 +1,44 @@
+$cell_size: 33px;
+$cell_flex: 0 0 $cell_size;
+.player-stats{
+  display: flex;
+}
+.HPpool{
+  display: flex;
+  width: 124px;
+  height: 443px;
+  gap: 9px 50px;
+  flex-wrap: wrap;
+  margin-left: auto;
+  
+  .cell{
+    &:nth-child(even){      
+      margin-left: calc(100% - 24px - $cell_size);
+    }
+    &:nth-child(odd){
+      margin-left: 24px
+    }
+    &-hp{
+      display: block;
+      flex: $cell_flex;
+      text-align: center;
+      border-radius: 50%;
+      background-color: green;
+      &__damaged{
+        background-color: red;
+      }
+    }
+    &-stun{
+      flex: $cell_flex;
+      text-align: center;
+      background-color: goldenrod;
+      border-radius: 50%;
+    }
+  }
+}
+.player-card-list{
+  display: flex;
+  width: 797px;
+  height: 140px;
+}
+

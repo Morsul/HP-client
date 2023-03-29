@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { Bank } from './bank/bank';
-import { Location } from './location/location';
-import { DarkArts } from './darkArts/darkArts';
-import { BonusDeck } from './bonusDeck/bonusDeck';
-import { Villians } from './villians/villians';
+import { Bank } from './bank/Bank';
+import { Location } from './location/Location';
+import { DarkArts } from './darkArts/DarkArts';
+import { BonusDeck } from './bonusDeck/BonusDeck';
+import { Villians } from './villians/Villians';
 import './field.scss';
 
 export const Field = () => {
@@ -11,20 +11,23 @@ export const Field = () => {
     <div className="field">
       <section className="left-side">
         <div className="group-horizontal">
-          <div className="grop-vertical">
+          <div className="group-vertical">
             <Bank />
             <Location />
           </div>
-          <div className="grop-vertical"></div>
-          <div className="grop-vertical">
+          <div className="group-vertical"></div>
+          <div className="group-vertical">
             <DarkArts />
           </div>
         </div>
+        <div className="wide">
+          <Villians />
+        </div>
       </section>
       <section className="right-side">
-        <Villians />
+        
       </section>
-      <section className="wide"></section>
+
       <section>
         <BonusDeck />
       </section>

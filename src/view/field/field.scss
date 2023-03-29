@@ -1,8 +1,9 @@
 * {
   box-sizing: border-box;
 }
+
 .field {
-  width: 70%;
+  width: 1920px;
   // margin: 0 auto;
   display: flex;
   vertical-align: top;
@@ -13,10 +14,7 @@
     display: flex;
     gap: 10px;
     align-items: flex-start;
-    > * {
-      background-color: grey;
-      padding: 10px;
-    }
+    flex-wrap: wrap;
   }
   .wide {
     flex: 0 0 100%;
@@ -42,7 +40,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
-  width: 490px;
+  width: 418px;
   margin-left: auto;
   &__update {
     margin-left: auto;
@@ -56,10 +54,11 @@
     flex-wrap: wrap;
     flex: 0 0 100%;
     align-self: flex-end;
+    justify-content: space-between;
   }
   &__played {
     cursor: pointer;
-    width: 150px;
+    width: 180px;
     height: 200px;
   }
 }
@@ -97,6 +96,19 @@
     font-size: 18px;
     &__damaged {
       background-color: red;
+    }
+  }
+}
+
+.group{
+  &-horizontal{
+    display: flex;
+    gap: 10px;
+  }
+  &-vertical{
+    > * {
+      background-color: grey;
+      padding: 10px;
     }
   }
 }

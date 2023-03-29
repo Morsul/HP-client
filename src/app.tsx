@@ -1,9 +1,11 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import { playablechars } from './pc';
 // import SocketService from './socket';
 import { io } from 'socket.io-client';
-import { SERVERLINK } from './const';
+import { SERVERLINK } from './serverConst';
 
 import { Field } from './view/field/field';
+import { Player } from './view/player/player';
 
 export const App = () => {
   const [socket] = useState(io(SERVERLINK, { autoConnect: false }));
@@ -38,7 +40,12 @@ export const App = () => {
 
   return (
     <Fragment>
-      <Field></Field>
+      <Field />
+      <Player 
+        name = {playablechars[1].name} 
+        description = {playablechars[1].description} 
+        gameAbility = {playablechars[1].gameAbility.find(abilityList => abilityList.id === 3)!.description}
+      />
       <div className={socketState !== undefined ? 'green' : 'red'}>
         Connection {String(socketState)}
       </div>

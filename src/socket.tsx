@@ -1,5 +1,5 @@
 import {io} from 'socket.io-client';
-import { SERVERLINK } from './const';
+import { SERVERLINK } from './serverConst';
 
 export default class SocketService {
   private _socket: any = {};
